@@ -15,7 +15,6 @@
 
 NSArray *arr;
 NSArray *_img;
-CGFloat _imgHeight;
 const CGFloat kCellWidth = 320;
 const CGFloat kCellHeight = 215;
 CustomTableViewCell *_stubCell;
@@ -40,7 +39,8 @@ CustomTableViewCell *_stubCell;
 
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
-    
+
+    // Cellの高さを計算するためあとで使用する
     _stubCell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
 //    self.tableView.estimatedRowHeight = 40;
@@ -56,21 +56,30 @@ CustomTableViewCell *_stubCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize checkSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, 400);
-    NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],
-                                 NSFontAttributeName:[UIFont systemFontOfSize:17.0]
-                                 };
+    // UILabelの高さを予測するために_stubCellの要素を使用する
+    UILabel *stubLabel = _stubCell.label;
+    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+
+    // UILabelの予想される高さを算出
     NSString *text = [arr objectAtIndex:indexPath.row];
+    NSDictionary *attributes = @{NSForegroundColorAttributeName:stubLabel.textColor,
+                                 NSFontAttributeName: stubLabel.font};
     NSAttributedString *string = [[NSAttributedString alloc] initWithString:text
                                                                  attributes:attributes];
-    
-    CGRect textFrame = [string boundingRectWithSize:checkSize
+    CGSize checkSize = CGSizeMake(screenWidth, CGFLOAT_MAX);
+    CGRect labelFrame = [string boundingRectWithSize:checkSize
                                             options:NSStringDrawingUsesLineFragmentOrigin
                                             context:nil];
-    NSLog(@"height: %f", textFrame.size.height);
-    _imgHeight = [[UIScreen mainScreen] bounds].size.width / kCellWidth * kCellHeight;
-    NSLog(@"_imgHeight: %f", _imgHeight);
-    return _imgHeight + textFrame.size.height + 20;
+    NSLog(@"UILabel height: %f", labelFrame.size.height);
+
+    // UIImageViewの高さを算出
+    CGFloat imgHeight = screenWidth / kCellWidth * kCellHeight;
+    NSLog(@"UIImageView height: %f", imgHeight);
+
+    // Cellを構成する各要素の高さの合計を返却する
+    CGFloat totalHeight = imgHeight + labelFrame.size.height + 20;
+    NSLog(@"Cell height: %f", totalHeight);
+    return totalHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
