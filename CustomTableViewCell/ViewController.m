@@ -36,8 +36,6 @@ NSArray *_img;
     ];
 
     [self.tableView registerNib:[UINib nibWithNibName:@"CustomTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
-    [self.tableView setDataSource:self];
-    [self.tableView setDelegate:self];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -56,7 +54,7 @@ NSArray *_img;
 
     [cell setNeedsLayout];
     [cell layoutIfNeeded];
-    NSLog(@"Cell height: %@", NSStringFromCGSize(cell.preferredView.bounds.size));
+    NSLog(@"Cell size: %@", NSStringFromCGSize(cell.preferredView.bounds.size));
     return cell.preferredView.bounds.size.height;
 }
 
@@ -65,13 +63,13 @@ NSArray *_img;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CustomTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
 - (void)configureCell:(CustomTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    cell.label.text = [_arr objectAtIndex:indexPath.row];
+    cell.labelView.text = [_arr objectAtIndex:indexPath.row];
     cell.photo.image = [UIImage imageNamed:[_img objectAtIndex:indexPath.row % 3]];
 }
 

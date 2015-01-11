@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="effel.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e13-QO-iho">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="e13-QO-iho" secondAttribute="height" multiplier="16:9" id="uPO-tQ-0MT"/>
+                                    <constraint firstAttribute="width" secondItem="e13-QO-iho" secondAttribute="height" multiplier="320:215" id="uPO-tQ-0MT"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-AG-BRh">
-                                <rect key="frame" x="8" y="188" width="304" height="21"/>
+                                <rect key="frame" x="8" y="223" width="304" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,12 +58,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageView" destination="e13-QO-iho" id="5eH-nF-udX"/>
-                <outlet property="label" destination="vuc-AG-BRh" id="8og-nF-NxE"/>
-                <outlet property="photo" destination="e13-QO-iho" id="4Av-VX-Zva"/>
+                <outlet property="labelView" destination="vuc-AG-BRh" id="bva-BU-a1B"/>
+                <outlet property="photo" destination="e13-QO-iho" id="W80-pA-xEZ"/>
                 <outlet property="preferredView" destination="ucV-Oc-5jB" id="bUB-Ua-zGt"/>
             </connections>
-            <point key="canvasLocation" x="139" y="153.5"/>
+            <point key="canvasLocation" x="139" y="153"/>
         </tableViewCell>
     </objects>
     <resources>
