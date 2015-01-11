@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189C78EF1A62B1D500A0144C /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189C78ED1A62B1D500A0144C /* CustomTableViewCell.m */; };
+		189C78F01A62B1D500A0144C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189C78EE1A62B1D500A0144C /* CustomTableViewCell.xib */; };
 		18D8BDC61A5ED40300C3F6B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8BDC51A5ED40300C3F6B0 /* main.m */; };
 		18D8BDC91A5ED40300C3F6B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8BDC81A5ED40300C3F6B0 /* AppDelegate.m */; };
 		18D8BDCC1A5ED40300C3F6B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8BDCB1A5ED40300C3F6B0 /* ViewController.m */; };
@@ -14,7 +16,6 @@
 		18D8BDD11A5ED40300C3F6B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D8BDD01A5ED40300C3F6B0 /* Images.xcassets */; };
 		18D8BDD41A5ED40300C3F6B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D8BDD21A5ED40300C3F6B0 /* LaunchScreen.xib */; };
 		18D8BDE01A5ED40300C3F6B0 /* CustomTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8BDDF1A5ED40300C3F6B0 /* CustomTableViewCellTests.m */; };
-		18D8BDEB1A5ED48E00C3F6B0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8BDEA1A5ED48E00C3F6B0 /* CustomTableViewCell.m */; };
 		18D8BDED1A5EDCCB00C3F6B0 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D8BDEC1A5EDCCB00C3F6B0 /* sample.jpg */; };
 		18D8BDF01A6025EE00C3F6B0 /* cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D8BDEE1A6025EE00C3F6B0 /* cake.jpg */; };
 		18D8BDF11A6025EE00C3F6B0 /* effel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D8BDEF1A6025EE00C3F6B0 /* effel.jpg */; };
@@ -31,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189C78EC1A62B1D500A0144C /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		189C78ED1A62B1D500A0144C /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		189C78EE1A62B1D500A0144C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		18D8BDC01A5ED40300C3F6B0 /* CustomTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D8BDC41A5ED40300C3F6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D8BDC51A5ED40300C3F6B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,8 +48,6 @@
 		18D8BDD91A5ED40300C3F6B0 /* CustomTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D8BDDE1A5ED40300C3F6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D8BDDF1A5ED40300C3F6B0 /* CustomTableViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCellTests.m; sourceTree = "<group>"; };
-		18D8BDE91A5ED48E00C3F6B0 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
-		18D8BDEA1A5ED48E00C3F6B0 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		18D8BDEC1A5EDCCB00C3F6B0 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		18D8BDEE1A6025EE00C3F6B0 /* cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cake.jpg; sourceTree = "<group>"; };
 		18D8BDEF1A6025EE00C3F6B0 /* effel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = effel.jpg; sourceTree = "<group>"; };
@@ -94,8 +96,9 @@
 				18D8BDC81A5ED40300C3F6B0 /* AppDelegate.m */,
 				18D8BDCA1A5ED40300C3F6B0 /* ViewController.h */,
 				18D8BDCB1A5ED40300C3F6B0 /* ViewController.m */,
-				18D8BDE91A5ED48E00C3F6B0 /* CustomTableViewCell.h */,
-				18D8BDEA1A5ED48E00C3F6B0 /* CustomTableViewCell.m */,
+				189C78EC1A62B1D500A0144C /* CustomTableViewCell.h */,
+				189C78ED1A62B1D500A0144C /* CustomTableViewCell.m */,
+				189C78EE1A62B1D500A0144C /* CustomTableViewCell.xib */,
 				18D8BDCD1A5ED40300C3F6B0 /* Main.storyboard */,
 				18D8BDEE1A6025EE00C3F6B0 /* cake.jpg */,
 				18D8BDEF1A6025EE00C3F6B0 /* effel.jpg */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D8BDCF1A5ED40300C3F6B0 /* Main.storyboard in Resources */,
+				189C78F01A62B1D500A0144C /* CustomTableViewCell.xib in Resources */,
 				18D8BDF01A6025EE00C3F6B0 /* cake.jpg in Resources */,
 				18D8BDF11A6025EE00C3F6B0 /* effel.jpg in Resources */,
 				18D8BDD41A5ED40300C3F6B0 /* LaunchScreen.xib in Resources */,
@@ -238,7 +242,7 @@
 			files = (
 				18D8BDCC1A5ED40300C3F6B0 /* ViewController.m in Sources */,
 				18D8BDC91A5ED40300C3F6B0 /* AppDelegate.m in Sources */,
-				18D8BDEB1A5ED48E00C3F6B0 /* CustomTableViewCell.m in Sources */,
+				189C78EF1A62B1D500A0144C /* CustomTableViewCell.m in Sources */,
 				18D8BDC61A5ED40300C3F6B0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +436,7 @@
 				18D8BDE51A5ED40300C3F6B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D8BDE61A5ED40300C3F6B0 /* Build configuration list for PBXNativeTarget "CustomTableViewCellTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +445,7 @@
 				18D8BDE81A5ED40300C3F6B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

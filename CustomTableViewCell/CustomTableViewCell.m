@@ -2,7 +2,7 @@
 //  CustomTableViewCell.m
 //  CustomTableViewCell
 //
-//  Created by Toru Furuya on 2015/01/09.
+//  Created by Toru Furuya on 2015/01/11.
 //  Copyright (c) 2015年 edu.myself. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 @implementation CustomTableViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     // Initialization code
 }
 
